@@ -6,6 +6,7 @@ const courseSchema = new mongoose.Schema({
     type: String,
     required: true,
     maxlength: 155,
+    unique: true,
   },
 
   price: {
