@@ -1,6 +1,7 @@
 import express from "express";
 import { connectDB } from "./db.connect.js";
 import courseRoutes from "./course/course.route.js";
+import studentRoutes from "./student/student.route.js";
 
 const app = express();
 // to make app understand json
@@ -11,6 +12,7 @@ await connectDB();
 
 // register routes
 app.use(courseRoutes);
+app.use(studentRoutes);
 
 // port
 const PORT = 8080;
